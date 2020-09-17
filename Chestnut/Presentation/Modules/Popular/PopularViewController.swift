@@ -10,6 +10,7 @@ import UIKit
 
 class PopularViewController: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
     // TODO: - Inject it (see ViewModelProvider (Android style))
@@ -17,12 +18,14 @@ class PopularViewController: UIViewController {
     
     private var popularMovies = [Movie]()
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         fetchData()
     }
     
+    // MARK: - View configuration
     private func setupViews() {
         setupNavigationBar()
         setupMovieCollectionView()
@@ -42,6 +45,7 @@ class PopularViewController: UIViewController {
         movieCollectionView.dataSource = self
     }
     
+    // MARK: - Fetch data
     private func fetchData() {
         viewModel.fetchMovies() { [weak self] movies in
             self?.popularMovies += movies

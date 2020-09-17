@@ -20,7 +20,6 @@ final class PopularViewModel {
         service.getPopularMovies { results in
             switch results {
             case .success(data: let data, _):
-                //print(data.movies)
                 onSuccess(data.movies)
             case .failure(error: let error):
                 print(error)
