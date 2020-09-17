@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PopularViewController: UIViewController {
 
+    var viewModel: PopularViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchMovies()
     }
 }
