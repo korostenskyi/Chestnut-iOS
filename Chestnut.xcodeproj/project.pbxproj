@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1B8FF04D8E754A5233F29D92 /* libPods-Chestnut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F9A4C3A18D70E3E48BB822 /* libPods-Chestnut.a */; };
-		D128E64525126FD6008C64D5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E64425126FD6008C64D5 /* Configuration.swift */; };
 		D128E64725127164008C64D5 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E64625127164008C64D5 /* Server.swift */; };
 		D128E64B25128E45008C64D5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E64A25128E45008C64D5 /* HTTPMethod.swift */; };
 		D128E64D25128F76008C64D5 /* URLConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E64C25128F76008C64D5 /* URLConstructable.swift */; };
@@ -33,7 +32,6 @@
 		8CEFBC54CC65309A0EFDC876 /* Pods-Chestnut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chestnut.debug.xcconfig"; path = "Target Support Files/Pods-Chestnut/Pods-Chestnut.debug.xcconfig"; sourceTree = "<group>"; };
 		D128E641251267BD008C64D5 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D128E642251267DB008C64D5 /* Example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
-		D128E64425126FD6008C64D5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		D128E64625127164008C64D5 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		D128E64A25128E45008C64D5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D128E64C25128F76008C64D5 /* URLConstructable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstructable.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 			children = (
 				D128E6642512B0CA008C64D5 /* Service */,
 				D128E6612512AF1B008C64D5 /* Endpoints */,
-				D128E64425126FD6008C64D5 /* Configuration.swift */,
 				D128E64625127164008C64D5 /* Server.swift */,
 				D128E64A25128E45008C64D5 /* HTTPMethod.swift */,
 				D128E64C25128F76008C64D5 /* URLConstructable.swift */,
@@ -339,7 +336,6 @@
 				D128E64B25128E45008C64D5 /* HTTPMethod.swift in Sources */,
 				D128E6682512BBB7008C64D5 /* PopularViewModel.swift in Sources */,
 				D1FBD40D25125CFB00F5F11A /* AppDelegate.swift in Sources */,
-				D128E64525126FD6008C64D5 /* Configuration.swift in Sources */,
 				D128E6602512AE66008C64D5 /* TimeUtils.swift in Sources */,
 				D128E65325129D5C008C64D5 /* RequestCreatable.swift in Sources */,
 				D128E64D25128F76008C64D5 /* URLConstructable.swift in Sources */,
