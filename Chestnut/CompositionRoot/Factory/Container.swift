@@ -20,9 +20,8 @@ extension Container: ModuleFactory {
     
     func makePopularViewController() -> PopularViewController {
         let viewController = UIStoryboard.Popular.popularViewController
-        let service = TMDBService()
-        let viewModel = PopularViewModel(with: service)
-        viewController.viewModel = viewModel
+        // let viewModel = PopularViewModel()
+        // viewController.viewModel = viewModel
         return viewController
     }
 }

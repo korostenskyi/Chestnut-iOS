@@ -24,7 +24,6 @@ final class ApplicationCoordinator: Coordinator {
         let vc = dependencies.makePopularViewController()
         router.push(vc, animation: true)
     }
-    
 }
 
 extension ApplicationCoordinator: UINavigationControllerDelegate  {

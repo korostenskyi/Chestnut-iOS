@@ -11,12 +11,7 @@ import Foundation
 final class PopularViewModel {
     
     // MARK: - Private variables
-    var service: TMDBService!
-    
-    // MARK: - Contructor
-    init(with service: TMDBService) {
-        self.service = service
-    }
+    private let service = TMDBService()
     
     // MARK: - Lifecycle
     func fetchMovies() {
