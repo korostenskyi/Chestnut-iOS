@@ -11,6 +11,13 @@ import Foundation
 struct Movie: Codable {
     var id: Int
     var title: String
+    var posterPath: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case posterPath = "poster_path"
+    }
 }
 
 struct MovieResponse: Codable {

@@ -24,6 +24,8 @@
 		D12F42C725135427004CA190 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42C625135427004CA190 /* Container.swift */; };
 		D12F42CE251354DD004CA190 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42CD251354DD004CA190 /* ApplicationCoordinator.swift */; };
 		D12F42D125136AEE004CA190 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42D025136AEE004CA190 /* AppCoordinator.swift */; };
+		D12F42D42513965C004CA190 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42D22513965C004CA190 /* MovieCollectionViewCell.swift */; };
+		D12F42D52513965C004CA190 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12F42D32513965C004CA190 /* MovieCollectionViewCell.xib */; };
 		D1FBD40D25125CFB00F5F11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD40C25125CFB00F5F11A /* AppDelegate.swift */; };
 		D1FBD40F25125CFB00F5F11A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD40E25125CFB00F5F11A /* SceneDelegate.swift */; };
 		D1FBD41125125CFB00F5F11A /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD41025125CFB00F5F11A /* PopularViewController.swift */; };
@@ -53,6 +55,8 @@
 		D12F42C625135427004CA190 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		D12F42CD251354DD004CA190 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		D12F42D025136AEE004CA190 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D12F42D22513965C004CA190 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		D12F42D32513965C004CA190 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		D1FBD40925125CFB00F5F11A /* Chestnut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chestnut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FBD40C25125CFB00F5F11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1FBD40E25125CFB00F5F11A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 		D1FBD42525125DEC00F5F11A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D12F42D32513965C004CA190 /* MovieCollectionViewCell.xib */,
 				D1FBD41225125CFB00F5F11A /* Main.storyboard */,
 				D1FBD41725125CFD00F5F11A /* LaunchScreen.storyboard */,
 			);
@@ -275,6 +280,7 @@
 			children = (
 				D1FBD41025125CFB00F5F11A /* PopularViewController.swift */,
 				D128E6672512BBB7008C64D5 /* PopularViewModel.swift */,
+				D12F42D22513965C004CA190 /* MovieCollectionViewCell.swift */,
 			);
 			path = Popular;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				D1FBD41925125CFD00F5F11A /* LaunchScreen.storyboard in Resources */,
 				D1FBD41625125CFD00F5F11A /* Assets.xcassets in Resources */,
 				D1FBD41425125CFB00F5F11A /* Main.storyboard in Resources */,
+				D12F42D52513965C004CA190 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +398,7 @@
 				D128E65125129C80008C64D5 /* NetworkManager.swift in Sources */,
 				D128E64B25128E45008C64D5 /* HTTPMethod.swift in Sources */,
 				D128E6682512BBB7008C64D5 /* PopularViewModel.swift in Sources */,
+				D12F42D42513965C004CA190 /* MovieCollectionViewCell.swift in Sources */,
 				D1FBD40D25125CFB00F5F11A /* AppDelegate.swift in Sources */,
 				D12F42C425135345004CA190 /* Router.swift in Sources */,
 				D128E6602512AE66008C64D5 /* TimeUtils.swift in Sources */,
