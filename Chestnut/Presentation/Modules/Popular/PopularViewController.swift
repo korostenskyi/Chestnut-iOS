@@ -11,7 +11,7 @@ import UIKit
 class PopularViewController: UIViewController {
 
     // TODO: - Inject it (see ViewModelProvider (Android style))
-    private let viewModel = PopularViewModel()
+    lazy var viewModel = PopularViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
