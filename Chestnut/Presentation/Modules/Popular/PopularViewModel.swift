@@ -10,8 +10,10 @@ import Foundation
 
 final class PopularViewModel {
     
+    // MARK: - Private variables
     private let service = TMDBService()
     
+    // MARK: - Lifecycle
     func fetchMovies() {
         service.getPopularMovies { results in
             switch results {

@@ -8,9 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PopularViewController: UIViewController {
 
+    // TODO: - Inject it (see ViewModelProvider (Android style))
+    lazy var viewModel = PopularViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchMovies()
     }
 }
