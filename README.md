@@ -20,9 +20,14 @@
 ## Screenshots 📱
 
 <table>
+<tr>
 <td>
 <img src="./media/screenshot1.jpg">
 </td>
+<td>
+<img src="./media/screenshot2.jpg">
+</td>
+</tr>
 </table>
 
 ## Requirements 🏗
