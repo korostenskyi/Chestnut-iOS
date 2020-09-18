@@ -15,6 +15,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet private weak var posterImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var isAdultLabel: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var releaseDateLabel: UILabel!
     
     public var movie: Movie?
     
@@ -30,6 +33,9 @@ class DetailsViewController: UIViewController {
         setupPosterImageView(with: movie.posterPath)
         setupTitleLabel(with: movie.title)
         setupDescriptionLabel(with: movie.overview)
+        setupIsAdultLabel(movie.isAdult)
+        setupRatingLabel(movie.voteAverage, movie.voteCount)
+        setupReleaseDateLabel(with: movie.releaseDate)
     }
     
     private func setupBackdropImageView(with path: String) {
@@ -54,5 +60,26 @@ class DetailsViewController: UIViewController {
     
     private func setupDescriptionLabel(with text: String) {
         descriptionLabel.text = text
+    }
+    
+    private func setupIsAdultLabel(_ isAdult: Bool) {
+        isAdultLabel.isHidden = !isAdult
+    }
+    
+    private func setupRatingLabel(_ voteAverage: Double, _ voteCount: Int) {
+        ratingLabel.text = "\(voteAverage)/10 from \(voteCount) votes"
+    }
+    
+    private func setupReleaseDateLabel(with releaseDateString: String) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let date = dateFormatter.date(from: releaseDateString) else { return }
+        dateFormatter.dateFormat = "yyyy"
+        let year = dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "MM"
+        let month = dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "dd"
+        let day = dateFormatter.string(from: date)
+        releaseDateLabel.text = "Release: \(day).\(month).\(year)"
     }
 }
