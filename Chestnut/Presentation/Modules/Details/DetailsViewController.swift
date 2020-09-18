@@ -9,8 +9,9 @@
 import Kingfisher
 import UIKit
 
-class DetailsViewController: UIViewController {
+final class DetailsViewController: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet private weak var backdropImageView: UIImageView!
     @IBOutlet private weak var posterImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -21,6 +22,7 @@ class DetailsViewController: UIViewController {
     
     public var movie: Movie?
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -28,6 +30,7 @@ class DetailsViewController: UIViewController {
         setupViews(with: movie)
     }
     
+    // MARK: - View configuration
     private func setupViews(with movie: Movie) {
         setupBackdropImageView(with: movie.backdropPath)
         setupPosterImageView(with: movie.posterPath)
@@ -74,12 +77,7 @@ class DetailsViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         guard let date = dateFormatter.date(from: releaseDateString) else { return }
-        dateFormatter.dateFormat = "yyyy"
-        let year = dateFormatter.string(from: date)
-        dateFormatter.dateFormat = "MM"
-        let month = dateFormatter.string(from: date)
-        dateFormatter.dateFormat = "dd"
-        let day = dateFormatter.string(from: date)
-        releaseDateLabel.text = "Release: \(day).\(month).\(year)"
+        let releaseDate = dateFormatter.toReleaseDate(from: date)
+        releaseDateLabel.text = "Release: \(releaseDate)"
     }
 }
