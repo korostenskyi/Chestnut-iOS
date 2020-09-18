@@ -11,17 +11,27 @@ import UIKit
 
 protocol ModuleFactory {
     
-    func makePopularViewController() -> PopularViewController
+    func makePopularViewController(with input: PopularInput) -> PopularViewController
+    
+    func makeDetailsViewController(with movie: Movie) -> DetailsViewController
 }
 
 final class Container { }
 
 extension Container: ModuleFactory {
     
-    func makePopularViewController() -> PopularViewController {
+    func makePopularViewController(with input: PopularInput) -> PopularViewController {
         let viewController = UIStoryboard.Popular.popularViewController
-        // let viewModel = PopularViewModel()
-        // viewController.viewModel = viewModel
+        let coordinator = PopularViewControllerCoordinator(with: input.parentCoordinator.router, dependencies: self)
+        let viewModel = PopularViewModel()
+        viewController.popularMovieCoordinator = coordinator
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
+    func makeDetailsViewController(with movie: Movie) -> DetailsViewController {
+        let viewController = UIStoryboard.Details.detailsViewController
+        viewController.movie = movie
         return viewController
     }
 }

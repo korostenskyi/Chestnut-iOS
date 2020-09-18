@@ -33,22 +33,32 @@ final class Router: RouterType {
     }
     
     public func push(_ vc: UIViewController, animation: Bool) {
-        navigationController.pushViewController(vc, animated: animation)
+        DispatchQueue.main.async {
+            self.navigationController.pushViewController(vc, animated: animation)
+        }
     }
     
     public func pop(_ animation: Bool) {
-        navigationController.popViewController(animated: animation)
+        DispatchQueue.main.async {
+            self.navigationController.popViewController(animated: animation)
+        }
     }
     
     public func popToRootViewController(_ animated: Bool) {
-        navigationController.popToRootViewController(animated: animated)
+        DispatchQueue.main.async {
+            self.navigationController.popToRootViewController(animated: animated)
+        }
     }
     
     public func popToViewController(_ vc: UIViewController, animated: Bool) {
-        navigationController.popToViewController(vc, animated: animated)
+        DispatchQueue.main.async {
+            self.navigationController.popToViewController(vc, animated: animated)
+        }
     }
     
     public func dismiss(_ animated: Bool, complition: (() -> Void)?) {
-        navigationController.dismiss(animated: animated, completion: complition)
+        DispatchQueue.main.async {
+            self.navigationController.dismiss(animated: animated, completion: complition)
+        }
     }
 }
