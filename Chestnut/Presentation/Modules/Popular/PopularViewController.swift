@@ -11,10 +11,10 @@ import UIKit
 class PopularViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var movieCollectionView: UICollectionView!
+    @IBOutlet private weak var movieCollectionView: UICollectionView!
     
-    // TODO: - Inject it (see ViewModelProvider (Android style))
-    lazy var viewModel = PopularViewModel()
+    var viewModel: PopularViewModel!
+    var popularMovieCoordinator: PopularViewControllerCoordinator!
     
     private var popularMovies = [Movie]()
     
@@ -60,7 +60,8 @@ extension PopularViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("You tapped me...")
+        let movie = popularMovies[indexPath.item]
+        popularMovieCoordinator.showDetails(for: movie)
     }
 }
 

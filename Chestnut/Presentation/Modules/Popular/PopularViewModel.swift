@@ -14,9 +14,7 @@ final class PopularViewModel {
     private let service = TMDBService()
     
     // MARK: - Lifecycle
-    func fetchMovies(
-        onSuccess: @escaping ([Movie]) -> Void
-    ) {
+    func fetchMovies(onSuccess: @escaping ([Movie]) -> Void) {
         service.getPopularMovies { results in
             switch results {
             case .success(data: let data, _):

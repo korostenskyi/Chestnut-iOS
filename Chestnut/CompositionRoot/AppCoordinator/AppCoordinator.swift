@@ -21,7 +21,8 @@ final class ApplicationCoordinator: Coordinator {
     public func start() {
         window.rootViewController = router.navigationController
         window.makeKeyAndVisible()
-        let vc = dependencies.makePopularViewController()
+        let input = PopularInput(with: self)
+        let vc = dependencies.makePopularViewController(with: input)
         router.push(vc, animation: true)
     }
 }

@@ -24,11 +24,18 @@ extension UIStoryboard {
     
     private enum Names {
         static let popular = UIStoryboard(name: "Main", bundle: nil)
+        static let details = UIStoryboard(name: "Details", bundle: nil)
     }
     
     enum Popular {
         static var popularViewController: PopularViewController {
             return Names.popular.instantiateViewController(ofType: PopularViewController.self)
+        }
+    }
+    
+    enum Details {
+        static var detailsViewController: DetailsViewController {
+            return Names.details.instantiateViewController(ofType: DetailsViewController.self)
         }
     }
 }

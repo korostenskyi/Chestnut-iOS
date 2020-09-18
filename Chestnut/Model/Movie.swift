@@ -11,12 +11,24 @@ import Foundation
 struct Movie: Codable {
     var id: Int
     var title: String
+    var overview: String
     var posterPath: String
+    var backdropPath: String
+    var isAdult: Bool
+    var releaseDate: String
+    var voteCount: Int
+    var voteAverage: Double
     
     private enum CodingKeys: String, CodingKey {
         case id
         case title
+        case overview
         case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
+        case isAdult = "adult"
+        case releaseDate = "release_date"
+        case voteCount = "vote_count"
+        case voteAverage = "vote_average"
     }
 }
 
