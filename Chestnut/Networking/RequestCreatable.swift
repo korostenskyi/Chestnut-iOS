@@ -11,10 +11,14 @@ import Foundation
 typealias RequestPoint = RequestConstructable & URLConstructable
 
 protocol RequestCreatable: AnyObject {
+    
     var requestPoint: RequestPoint { get set }
+    
     var body: Encodable? { get set }
+    
     func addStandartHeadersFor(request: inout URLRequest)
-    func popularMoviesUrl() throws -> URLRequest
+    
+    func popularMoviesUrl(on page: Int) throws -> URLRequest
 }
 
 protocol RequestConstructable {
@@ -37,9 +41,9 @@ extension RequestCreatable {
         request.addValue("application/json", forHTTPHeaderField: "content-type")
     }
     
-    func popularMoviesUrl() throws -> URLRequest {
+    func popularMoviesUrl(on page: Int) throws -> URLRequest {
         
-        guard let destinationURL = try? requestPoint.popularMoviesUrl() else {
+        guard let destinationURL = try? requestPoint.popularMoviesUrl(on: page) else {
             throw NetworkError.cannotCreateRequest
         }
         

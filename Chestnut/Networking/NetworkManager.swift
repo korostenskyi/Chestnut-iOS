@@ -10,7 +10,7 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     
-    func send(request: RequestCreatable, complition: @escaping ((NetworkResult) -> Void))
+    func send(request: RequestCreatable, page: Int, complition: @escaping ((NetworkResult) -> Void))
 }
 
 internal enum NetworkResult {
@@ -33,9 +33,9 @@ final class NetworkManager {
 //MARK: NetworkServiceProtocol
 extension NetworkManager: NetworkServiceProtocol {
     
-    func send(request: RequestCreatable, complition: @escaping ((NetworkResult) -> Void)) {
+    func send(request: RequestCreatable, page: Int, complition: @escaping ((NetworkResult) -> Void)) {
 
-        guard let urlRequest = try? request.popularMoviesUrl() else {
+        guard let urlRequest = try? request.popularMoviesUrl(on: page) else {
             complition(.failure(error: .emptyRequest))
             return
         }

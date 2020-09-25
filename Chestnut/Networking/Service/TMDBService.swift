@@ -10,10 +10,10 @@ import Foundation
 
 struct TMDBService {
     
-    public func getPopularMovies(completion: @escaping (NetworkResult) -> Void) {
+    public func getPopularMovies(on page: Int, completion: @escaping (NetworkResult) -> Void) {
         let manager = NetworkManager()
         let endpoint = PopularMovieEndpoint.getPopularMovies
         let request = CustomRequest(for: endpoint)
-        manager.send(request: request, complition: completion)
+        manager.send(request: request, page: page, complition: completion)
     }
 }
