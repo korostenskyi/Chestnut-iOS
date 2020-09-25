@@ -10,12 +10,14 @@ import Foundation
 
 final class PopularViewModel {
     
+    var page = 1
+    
     // MARK: - Private variables
     private let service = TMDBService()
     
     // MARK: - Lifecycle
-    func fetchMovies(onSuccess: @escaping ([Movie]) -> Void) {
-        service.getPopularMovies { results in
+    func fetchMovies(on page: Int, onSuccess: @escaping ([Movie]) -> Void) {
+        service.getPopularMovies(on: page) { results in
             switch results {
             case .success(data: let data, _):
                 onSuccess(data.movies)

@@ -12,7 +12,7 @@ protocol URLConstructable {
 
     var server: Server { get }
     
-    func popularMoviesUrl() throws -> URL
+    func popularMoviesUrl(on page: Int) throws -> URL
 }
 
 extension URLConstructable {
@@ -23,13 +23,14 @@ extension URLConstructable {
         return key
     }
     
-    func popularMoviesUrl() throws -> URL {
+    func popularMoviesUrl(on page: Int) throws -> URL {
         var urlComponents = URLComponents()
         urlComponents.scheme = server.scheme.rawValue
         urlComponents.host = server.host
         urlComponents.path = "/3/movie/popular"
         urlComponents.queryItems = [
-            URLQueryItem(name: "api_key", value: getApiKey())
+            URLQueryItem(name: "api_key", value: getApiKey()),
+            URLQueryItem(name: "page", value: String(page))
         ]
         guard let finalURL = urlComponents.url else {
             throw NetworkError.wrongURL(info: "Smth wrong with url, please check this out")

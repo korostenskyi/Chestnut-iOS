@@ -22,7 +22,7 @@ class PopularViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        fetchData()
+        fetchData(on: viewModel.page)
     }
     
     // MARK: - View configuration
@@ -46,8 +46,8 @@ class PopularViewController: UIViewController {
     }
     
     // MARK: - Fetch data
-    private func fetchData() {
-        viewModel.fetchMovies() { [weak self] movies in
+    private func fetchData(on page: Int) {
+        viewModel.fetchMovies(on: page) { [weak self] movies in
             self?.popularMovies += movies
             DispatchQueue.main.async {
                 self?.movieCollectionView.reloadData()
@@ -78,6 +78,13 @@ extension PopularViewController: UICollectionViewDataSource {
         }
         cell.configure(with: popularMovies[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == popularMovies.count - 1 {
+            viewModel.page += 1
+            fetchData(on: viewModel.page)
+        }
     }
 }
 
