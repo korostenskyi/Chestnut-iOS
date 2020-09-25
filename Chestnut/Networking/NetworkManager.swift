@@ -40,7 +40,7 @@ extension NetworkManager: NetworkServiceProtocol {
             return
         }
         
-        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+        let task = session.dataTask(with: urlRequest) { (data, response, _) in
             guard let response = response as? HTTPURLResponse else {
                 complition(.failure(error: .generalFailure))
                 return

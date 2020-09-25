@@ -10,6 +10,8 @@ import Foundation
 
 final class PopularViewModel {
     
+    var page = 1
+    
     // MARK: - Private variables
     private let service = TMDBService()
     

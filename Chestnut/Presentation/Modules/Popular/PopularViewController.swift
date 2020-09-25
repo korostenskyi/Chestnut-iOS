@@ -17,13 +17,12 @@ class PopularViewController: UIViewController {
     var popularMovieCoordinator: PopularViewControllerCoordinator!
     
     private var popularMovies = [Movie]()
-    private var page = 1
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        fetchData(on: page)
+        fetchData(on: viewModel.page)
     }
     
     // MARK: - View configuration
@@ -83,8 +82,8 @@ extension PopularViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.item == popularMovies.count - 1 {
-            page += 1
-            fetchData(on: page)
+            viewModel.page += 1
+            fetchData(on: viewModel.page)
         }
     }
 }
