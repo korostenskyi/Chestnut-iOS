@@ -16,7 +16,13 @@ class PopularViewController: UIViewController {
     var viewModel: PopularViewModel!
     var popularMovieCoordinator: PopularViewControllerCoordinator!
     
-    private var popularMovies = [Movie]()
+    private var popularMovies = [Movie]() {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.movieCollectionView.reloadData()
+            }
+        }
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -49,9 +55,6 @@ class PopularViewController: UIViewController {
     private func fetchData(on page: Int) {
         viewModel.fetchMovies(on: page) { [weak self] movies in
             self?.popularMovies += movies
-            DispatchQueue.main.async {
-                self?.movieCollectionView.reloadData()
-            }
         }
     }
 }
