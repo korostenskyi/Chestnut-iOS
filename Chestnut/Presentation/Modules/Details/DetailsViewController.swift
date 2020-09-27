@@ -32,13 +32,14 @@ final class DetailsViewController: UIViewController {
     
     // MARK: - View configuration
     private func setupViews(with movie: Movie) {
-        setupBackdropImageView(with: movie.backdropPath)
         setupPosterImageView(with: movie.posterPath)
         setupTitleLabel(with: movie.title)
         setupDescriptionLabel(with: movie.overview)
         setupIsAdultLabel(movie.isAdult)
         setupRatingLabel(movie.voteAverage, movie.voteCount)
         setupReleaseDateLabel(with: movie.releaseDate)
+        guard let backdropPath = movie.backdropPath else { return }
+        setupBackdropImageView(with: backdropPath)
     }
     
     private func setupBackdropImageView(with path: String) {
