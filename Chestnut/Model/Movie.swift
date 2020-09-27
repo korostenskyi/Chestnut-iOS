@@ -13,7 +13,7 @@ struct Movie: Codable {
     var title: String
     var overview: String
     var posterPath: String
-    var backdropPath: String
+    var backdropPath: String?
     var isAdult: Bool
     var releaseDate: String
     var voteCount: Int
