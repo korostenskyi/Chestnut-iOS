@@ -31,6 +31,10 @@ class PopularViewController: UIViewController {
         fetchData(on: viewModel.page)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - View configuration
     private func setupViews() {
         setupNavigationBar()
