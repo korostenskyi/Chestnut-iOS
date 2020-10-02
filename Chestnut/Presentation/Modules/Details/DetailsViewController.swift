@@ -32,6 +32,7 @@ final class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
         guard let movie = movie else { return }
         setupViews(with: movie)
     }
@@ -109,5 +110,11 @@ final class DetailsViewController: UIViewController {
                 style = .darkContent
             }
         }
+    }
+}
+
+extension DetailsViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
