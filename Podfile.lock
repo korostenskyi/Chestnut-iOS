@@ -2,17 +2,21 @@ PODS:
   - Kingfisher (5.15.1):
     - Kingfisher/Core (= 5.15.1)
   - Kingfisher/Core (5.15.1)
+  - UIImageColors (2.1.0)
 
 DEPENDENCIES:
   - Kingfisher
+  - UIImageColors
 
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - UIImageColors
 
 SPEC CHECKSUMS:
   Kingfisher: 3260a05e78a17fdbeb2f14dd8e66ffc768491231
+  UIImageColors: d2ef3b0877d203cbb06489eeb78ea8b7788caabe
 
-PODFILE CHECKSUM: 8a9d097180741c7757a29ede4c392937694e1021
+PODFILE CHECKSUM: 46aa78febe2df00bbf1b6cb6b0c86b59f5557b7b
 
 COCOAPODS: 1.9.1

@@ -20,6 +20,12 @@ final class DetailsViewController: UIViewController {
     @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var releaseDateLabel: UILabel!
     
+    private var style: UIStatusBarStyle = .default {
+        didSet {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     public var movie: Movie?
     
     // MARK: - Lifecycle
@@ -31,6 +37,10 @@ final class DetailsViewController: UIViewController {
     }
     
     // MARK: - View configuration
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return self.style
+    }
+    
     private func setupViews(with movie: Movie) {
         setupPosterImageView(with: movie.posterPath)
         setupTitleLabel(with: movie.title)
@@ -44,8 +54,24 @@ final class DetailsViewController: UIViewController {
     
     private func setupBackdropImageView(with path: String) {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w1280\(path)") else { return }
-        backdropImageView.kf.setImage(with: url)
-        backdropImageView.contentMode = .scaleToFill
+        
+        KingfisherManager.shared.retrieveImage(with: url) { [weak self] result in
+            switch result {
+            case .success(let value):
+                self?.backdropImageView.image = value.image
+                self?.backdropImageView.contentMode = .scaleToFill
+                if #available(iOS 13.0, *) {
+                    guard let image = value.image.cgImage else { return }
+                    if image.isDark {
+                        self?.style = .lightContent
+                    } else {
+                        self?.style = .darkContent
+                    }
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func setupPosterImageView(with path: String) {
