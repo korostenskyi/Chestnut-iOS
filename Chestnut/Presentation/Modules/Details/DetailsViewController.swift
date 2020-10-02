@@ -54,20 +54,12 @@ final class DetailsViewController: UIViewController {
     
     private func setupBackdropImageView(with path: String) {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w1280\(path)") else { return }
-        
         KingfisherManager.shared.retrieveImage(with: url) { [weak self] result in
             switch result {
             case .success(let value):
                 self?.backdropImageView.image = value.image
                 self?.backdropImageView.contentMode = .scaleToFill
-                if #available(iOS 13.0, *) {
-                    guard let image = value.image.cgImage else { return }
-                    if image.isDark {
-                        self?.style = .lightContent
-                    } else {
-                        self?.style = .darkContent
-                    }
-                }
+                self?.setupStatusBar(by: value.image)
             case .failure(let error):
                 print(error)
             }
@@ -106,5 +98,16 @@ final class DetailsViewController: UIViewController {
         guard let date = dateFormatter.date(from: releaseDateString) else { return }
         let releaseDate = dateFormatter.toReleaseDate(from: date)
         releaseDateLabel.text = "Release: \(releaseDate)"
+    }
+    
+    private func setupStatusBar(by image: UIImage) {
+        if #available(iOS 13.0, *) {
+            guard let image = image.cgImage else { return }
+            if image.isDark {
+                style = .lightContent
+            } else {
+                style = .darkContent
+            }
+        }
     }
 }
