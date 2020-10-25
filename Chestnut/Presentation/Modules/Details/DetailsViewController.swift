@@ -31,7 +31,6 @@ final class DetailsViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         guard let movie = movie else { return }
         setupViews(with: movie)
@@ -61,6 +60,7 @@ final class DetailsViewController: UIViewController {
                 self?.backdropImageView.image = value.image
                 self?.backdropImageView.contentMode = .scaleToFill
                 self?.setupStatusBar(by: value.image)
+                self?.setupNavigationBar(by: value.image)
             case .failure(let error):
                 print(error)
             }
@@ -109,6 +109,27 @@ final class DetailsViewController: UIViewController {
             } else {
                 style = .darkContent
             }
+        }
+    }
+    
+    private func setupNavigationBar(by image: UIImage) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        guard let image = image.cgImage else { return }
+        if image.isDark {
+            navigationController?.navigationBar.barStyle = .blackTranslucent
+            navigationController?.navigationBar.titleTextAttributes = [
+                .foregroundColor: UIColor.black
+            ]
+            navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.99997437, blue: 0.9999912977, alpha: 1)
+            
+        } else {
+            navigationController?.navigationBar.barStyle = .default
+            navigationController?.navigationBar.titleTextAttributes = [
+                .foregroundColor: UIColor.white
+            ]
+            navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
     }
 }
