@@ -25,6 +25,7 @@ extension UIStoryboard {
     private enum Names {
         static let popular = UIStoryboard(name: "Main", bundle: nil)
         static let details = UIStoryboard(name: "Details", bundle: nil)
+        static let signIn = UIStoryboard(name: "SignIn", bundle: nil)
     }
     
     enum Popular {
@@ -36,6 +37,12 @@ extension UIStoryboard {
     enum Details {
         static var detailsViewController: DetailsViewController {
             return Names.details.instantiateViewController(ofType: DetailsViewController.self)
+        }
+    }
+    
+    enum SignIn {
+        static var signInViewController: SignInViewController {
+            return Names.signIn.instantiateViewController(ofType: SignInViewController.self)
         }
     }
 }

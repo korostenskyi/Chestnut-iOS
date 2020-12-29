@@ -55,3 +55,6 @@ fastlane/metadata
 Configs/*
 !Configs/Example.xcconfig
 *.generated.swift
+
+# Firebase
+GoogleService-Info.plist

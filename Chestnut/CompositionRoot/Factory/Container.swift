@@ -14,6 +14,8 @@ protocol ModuleFactory {
     func makePopularViewController(with input: PopularInput) -> PopularViewController
     
     func makeDetailsViewController(with movie: Movie) -> DetailsViewController
+    
+    func makeSignInViewController() -> SignInViewController
 }
 
 final class Container { }
@@ -32,6 +34,13 @@ extension Container: ModuleFactory {
     func makeDetailsViewController(with movie: Movie) -> DetailsViewController {
         let viewController = UIStoryboard.Details.detailsViewController
         viewController.movie = movie
+        return viewController
+    }
+    
+    func makeSignInViewController() -> SignInViewController {
+        let viewController = UIStoryboard.SignIn.signInViewController
+        let viewModel = SignInViewModel()
+        viewController.viewModel = viewModel
         return viewController
     }
 }

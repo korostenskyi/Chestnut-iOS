@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @available(iOS 13.0, *)
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -25,6 +26,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let appCoordinator = ApplicationCoordinator(with: window, router: router, dependencies: dependencyContainter)
         self.applicationCoordinator = appCoordinator
         appCoordinator.start()
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

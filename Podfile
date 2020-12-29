@@ -4,6 +4,8 @@ inhibit_all_warnings!
 
 def pods
   pod 'Kingfisher'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end
 
 target 'Chestnut' do

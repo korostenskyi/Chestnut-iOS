@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		D128E6632512AF31008C64D5 /* PopularMovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E6622512AF31008C64D5 /* PopularMovieEndpoint.swift */; };
 		D128E6662512B0DF008C64D5 /* TMDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E6652512B0DF008C64D5 /* TMDBService.swift */; };
 		D128E6682512BBB7008C64D5 /* PopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128E6672512BBB7008C64D5 /* PopularViewModel.swift */; };
+		D12DD19E259B153100A75A3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D12DD19D259B153100A75A3B /* GoogleService-Info.plist */; };
 		D12F42C025134CE5004CA190 /* UIStoryboard+StoryboardInitializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42BF25134CE5004CA190 /* UIStoryboard+StoryboardInitializing.swift */; };
 		D12F42C425135345004CA190 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42C325135345004CA190 /* Router.swift */; };
 		D12F42C725135427004CA190 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F42C625135427004CA190 /* Container.swift */; };
@@ -33,6 +34,9 @@
 		D17DBB3C2513D1B10064E204 /* PopularViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DBB3B2513D1B10064E204 /* PopularViewControllerCoordinator.swift */; };
 		D17DBB3E2513E7620064E204 /* PopularInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17DBB3D2513E7620064E204 /* PopularInput.swift */; };
 		D1D45901252763530012AEAC /* CGImage+IsDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D45900252763530012AEAC /* CGImage+IsDark.swift */; };
+		D1F68C93259B28960081329C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F68C92259B28960081329C /* SignInViewController.swift */; };
+		D1F68C96259B28D30081329C /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F68C95259B28D30081329C /* SignIn.storyboard */; };
+		D1F68C99259B29B20081329C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F68C98259B29B20081329C /* SignInViewModel.swift */; };
 		D1FBD40D25125CFB00F5F11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD40C25125CFB00F5F11A /* AppDelegate.swift */; };
 		D1FBD40F25125CFB00F5F11A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD40E25125CFB00F5F11A /* SceneDelegate.swift */; };
 		D1FBD41125125CFB00F5F11A /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD41025125CFB00F5F11A /* PopularViewController.swift */; };
@@ -57,6 +61,7 @@
 		D128E6622512AF31008C64D5 /* PopularMovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieEndpoint.swift; sourceTree = "<group>"; };
 		D128E6652512B0DF008C64D5 /* TMDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBService.swift; sourceTree = "<group>"; };
 		D128E6672512BBB7008C64D5 /* PopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewModel.swift; sourceTree = "<group>"; };
+		D12DD19D259B153100A75A3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D12F42BF25134CE5004CA190 /* UIStoryboard+StoryboardInitializing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardInitializing.swift"; sourceTree = "<group>"; };
 		D12F42C325135345004CA190 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D12F42C625135427004CA190 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -71,6 +76,9 @@
 		D17DBB3B2513D1B10064E204 /* PopularViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		D17DBB3D2513E7620064E204 /* PopularInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularInput.swift; sourceTree = "<group>"; };
 		D1D45900252763530012AEAC /* CGImage+IsDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+IsDark.swift"; sourceTree = "<group>"; };
+		D1F68C92259B28960081329C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D1F68C95259B28D30081329C /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		D1F68C98259B29B20081329C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		D1FBD40925125CFB00F5F11A /* Chestnut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chestnut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FBD40C25125CFB00F5F11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1FBD40E25125CFB00F5F11A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +230,15 @@
 			path = ModuleInput;
 			sourceTree = "<group>";
 		};
+		D1F68C91259B28820081329C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D1F68C92259B28960081329C /* SignInViewController.swift */,
+				D1F68C98259B29B20081329C /* SignInViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		D1FBD40025125CFB00F5F11A = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +260,7 @@
 		D1FBD40B25125CFB00F5F11A /* Chestnut */ = {
 			isa = PBXGroup;
 			children = (
+				D12DD19D259B153100A75A3B /* GoogleService-Info.plist */,
 				D128E6402512679D008C64D5 /* Configs */,
 				D128E6592512A66B008C64D5 /* Model */,
 				D128E64325126FA2008C64D5 /* Networking */,
@@ -293,6 +311,7 @@
 		D1FBD42425125DE100F5F11A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D1F68C91259B28820081329C /* SignIn */,
 				D17DBB2F2513C9FD0064E204 /* Details */,
 				D1FBD42625125E0700F5F11A /* Popular */,
 			);
@@ -306,6 +325,7 @@
 				D1FBD41225125CFB00F5F11A /* Main.storyboard */,
 				D1FBD41725125CFD00F5F11A /* LaunchScreen.storyboard */,
 				D17DBB372513CDD10064E204 /* Details.storyboard */,
+				D1F68C95259B28D30081329C /* SignIn.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -341,6 +361,7 @@
 				D1FBD40525125CFB00F5F11A /* Sources */,
 				D1FBD40625125CFB00F5F11A /* Frameworks */,
 				D1FBD40725125CFB00F5F11A /* Resources */,
+				47B8702BBB74EB6115B15F80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -394,12 +415,31 @@
 				D1FBD41625125CFD00F5F11A /* Assets.xcassets in Resources */,
 				D1FBD41425125CFB00F5F11A /* Main.storyboard in Resources */,
 				D12F42D52513965C004CA190 /* MovieCollectionViewCell.xib in Resources */,
+				D1F68C96259B28D30081329C /* SignIn.storyboard in Resources */,
+				D12DD19E259B153100A75A3B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		47B8702BBB74EB6115B15F80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chestnut/Pods-Chestnut-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chestnut/Pods-Chestnut-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chestnut/Pods-Chestnut-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6418053866598CDDD8AD5E05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,12 +477,14 @@
 				D128E65125129C80008C64D5 /* NetworkManager.swift in Sources */,
 				D128E64B25128E45008C64D5 /* HTTPMethod.swift in Sources */,
 				D128E6682512BBB7008C64D5 /* PopularViewModel.swift in Sources */,
+				D1F68C99259B29B20081329C /* SignInViewModel.swift in Sources */,
 				D12F42D42513965C004CA190 /* MovieCollectionViewCell.swift in Sources */,
 				D17DBB362513CB740064E204 /* ModuleInput.swift in Sources */,
 				D1FBD40D25125CFB00F5F11A /* AppDelegate.swift in Sources */,
 				D12F42C425135345004CA190 /* Router.swift in Sources */,
 				D13CD7C92514B88000F28E6D /* DateFormat+ReleaseDate.swift in Sources */,
 				D128E6602512AE66008C64D5 /* TimeUtils.swift in Sources */,
+				D1F68C93259B28960081329C /* SignInViewController.swift in Sources */,
 				D17DBB312513CA160064E204 /* DetailsViewController.swift in Sources */,
 				D128E65325129D5C008C64D5 /* RequestCreatable.swift in Sources */,
 				D128E64D25128F76008C64D5 /* URLConstructable.swift in Sources */,
